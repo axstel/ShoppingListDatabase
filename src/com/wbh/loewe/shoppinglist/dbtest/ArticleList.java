@@ -1,4 +1,6 @@
-package com.wbh.loewe.shoppinglist.database;
+package com.wbh.loewe.shoppinglist.dbtest;
+
+import com.wbh.loewe.shoppinglist.database.ShoppingListDatabase;
 
 
 public class ArticleList extends DatatableList {

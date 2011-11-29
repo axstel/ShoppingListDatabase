@@ -1,4 +1,4 @@
-package com.wbh.loewe.shoppinglist.database;
+package com.wbh.loewe.shoppinglist.dbtest;
 
 import android.app.Activity;
 import android.content.Intent;

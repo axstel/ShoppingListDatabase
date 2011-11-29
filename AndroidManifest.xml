@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.wbh.loewe.shoppinglist.database"
+    package="com.wbh.loewe.shoppinglist.dbtest"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -11,15 +11,13 @@
         android:label="@string/app_name">
         <activity
             android:label="@string/app_name"
-            android:name=".ShoppingListDatabaseActivity" >
+            android:name="com.wbh.loewe.shoppinglist.dbtest.ShoppingListDatabaseActivity" >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".QuantityunitList"></activity>
-        <activity android:name=".CategoryList"></activity>
+        </activity>		<activity android:name=".QuantityunitList"></activity>		<activity android:name=".CategoryListivity"></activity>
         <activity android:name=".ArticleList"></activity>
     </application>
 

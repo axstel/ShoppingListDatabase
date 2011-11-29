@@ -1,4 +1,4 @@
-package com.wbh.loewe.shoppinglist.database;
+package com.wbh.loewe.shoppinglist.dbtest;
 
 import android.app.ListActivity;
 import android.database.Cursor;
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SimpleCursorAdapter;
+
+import com.wbh.loewe.shoppinglist.database.ShoppingListDatabase;
+import com.wbh.loewe.shoppinglist.database.ShoppingListDatabaseHelper;
 
 public class DatatableList extends ListActivity {
 	
