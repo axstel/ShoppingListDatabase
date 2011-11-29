@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, ShoppingListDatabaseActivity!</string>
+    <string name="app_name">ShoppingListDatabase</string>
+    <string name="no_items">Currently there are no items maintained</string>
+    <string name="btn_quantityunits_caption">Mengeneinheiten</string>
+    <string name="btn_categories_caption">Kategorien</string>
+    <string name="btn_articles_caption">Artikel</string>
+    <string name="btn_finish_caption">Zurück</string>
+
+</resources>
