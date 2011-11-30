@@ -1,5 +1,7 @@
 package com.wbh.loewe.shoppinglist.database;
 
+import java.io.IOException;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -17,7 +19,12 @@ public class ShoppingListDatabaseAdapter {
 
 	public ShoppingListDatabaseAdapter open() throws SQLException {
 		dbHelper = new ShoppingListDatabaseHelper(context);
-		db = dbHelper.getWritableDatabase();
+		try {
+			dbHelper.createDataBase();
+			db = dbHelper.getWritableDatabase();
+		} catch (IOException ioe) {
+	 		throw new Error("Unable to create database");
+	 	}
 		return this;
 	}
 
