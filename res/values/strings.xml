@@ -8,5 +8,13 @@
     <string name="btn_categories_caption">Kategorien</string>
     <string name="btn_articles_caption">Artikel</string>
     <string name="btn_finish_caption">Zurück</string>
-
+    <string name="btn_additem_caption">Hinzufügen</string>
+    <string name="btn_edititem_caption">Ändern</string>
+    <string name="btn_deleteitem_caption">Löschen</string>
+    <string name="txt_ok">OK</string>
+    <string name="txt_cancel">Abbrechen</string>
+    <string name="txt_name">Name</string>
+    <string name="txt_category">Kategorie</string>
+    <string name="txt_quantityunit">Einheit</string>
+    
 </resources>

@@ -25,11 +25,23 @@ public class DatatableList extends ListActivity {
         
         fillData();
 		
-		Button btn_finish = (Button)findViewById(R.id.btn_finish);
-		btn_finish.setOnClickListener(new View.OnClickListener() {
+        /* Assign Clickmethods */
+		Button btn;
+		
+		btn= (Button)findViewById(R.id.btn_finish);
+		btn.setOnClickListener(new View.OnClickListener() {
 			
 			public void onClick(View v) {
 				finish();
+			}
+		});
+		
+		/* http://about-android.blogspot.com/2010/02/create-custom-dialog.html*/
+		btn = (Button)findViewById(R.id.btn_additem);
+		btn.setOnClickListener(new View.OnClickListener() {
+			
+			public void onClick(View v) {
+				showAddItemDialog();
 			}
 		});
     }
@@ -45,4 +57,8 @@ public class DatatableList extends ListActivity {
  		SimpleCursorAdapter notes = new SimpleCursorAdapter(this, R.layout.list_row, cursor, from, to);
  		setListAdapter(notes);
  	}
+    
+    protected void showAddItemDialog() {
+    	
+    }
 }

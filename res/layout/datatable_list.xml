@@ -17,10 +17,31 @@
 		android:gravity="center_vertical|center_horizontal"
 		android:layout_above="@+id/btn_finish" />
 	<Button  
+		android:id="@+id/btn_additem"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:text="@string/btn_additem_caption" />
+	<Button  
+		android:id="@+id/btn_edititem"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:text="@string/btn_edititem_caption" 
+		android:layout_toRightOf="@+id/btn_additem" />
+	<Button  
+		android:id="@+id/btn_deleteitem"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:text="@string/btn_deleteitem_caption" 
+		android:layout_toRightOf="@+id/btn_edititem" />
+	<Button  
 		android:id="@+id/btn_finish"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_alignParentBottom="true"
-		android:text="@string/btn_finish_caption" />
+		android:text="@string/btn_finish_caption"
+		android:layout_toRightOf="@+id/btn_deleteitem" />
 	
 </RelativeLayout>
