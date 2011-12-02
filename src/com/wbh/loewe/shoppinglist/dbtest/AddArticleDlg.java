@@ -1,17 +1,25 @@
 package com.wbh.loewe.shoppinglist.dbtest;
 
 import android.app.Dialog;
+import android.content.ContentValues;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.wbh.loewe.shoppinglist.database.ShoppingListDatabase;
+
 public class AddArticleDlg extends Dialog {
 
 	/* http://about-android.blogspot.com/2010/02/create-custom-dialog.html */
 	/* http://androidcookbook.com/Recipe.seam;jsessionid=40151FCD26222877E151C3EEFB406EED?recipeId=1728&recipeFrom=ViewTOC */
 	
+	public interface ReadyListener {
+        public void ready(int aState, ContentValues aValue);
+    }
+	
+	private ReadyListener mReadyListener;
 	private int mID;
 	private String mName;
 	private String mCategory;
@@ -20,8 +28,9 @@ public class AddArticleDlg extends Dialog {
 	private EditText edt_Category;
 	private EditText edt_QuantityUnit;
 	
-    public AddArticleDlg(Context context, int aID, String aName, String aCategory, String aQuantityUnit) {
+    public AddArticleDlg(Context context, int aID, String aName, String aCategory, String aQuantityUnit, ReadyListener aReadyListener) {
         super(context);
+        this.mReadyListener = aReadyListener;
         this.mID = aID;
         this.mName = aName; 
         this.mCategory = aCategory;
@@ -50,12 +59,19 @@ public class AddArticleDlg extends Dialog {
 
     private class btn_ok_click implements android.view.View.OnClickListener {
         public void onClick(View v) {
+        	ContentValues values = new ContentValues();
+    		values.put(ShoppingListDatabase.FIELD_NAME_NAME, String.valueOf(edt_Name.getText()));
+    		values.put(ShoppingListDatabase.FIELD_NAME_IDCATEGORY, String.valueOf(edt_Category.getText()));
+    		values.put(ShoppingListDatabase.FIELD_NAME_IDQUANTITYUNIT, String.valueOf(edt_QuantityUnit.getText()));   		
+        	
+        	mReadyListener.ready(0, values);
         	AddArticleDlg.this.dismiss();
         }
     }
     
     private class btn_cancel_click implements android.view.View.OnClickListener {
         public void onClick(View v) {
+        	mReadyListener.ready(1, null);
         	AddArticleDlg.this.cancel();
         }
     }

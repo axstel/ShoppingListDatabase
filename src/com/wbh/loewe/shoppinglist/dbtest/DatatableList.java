@@ -5,14 +5,16 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.Toast;
 
 import com.wbh.loewe.shoppinglist.database.ShoppingListDatabase;
 
 public class DatatableList extends ListActivity {
 	
 	private Cursor cursor;
-	private ShoppingListDatabaseApplication shoppinglistapp;
+	ShoppingListDatabaseApplication shoppinglistapp;
 	protected String tablename;
 	
     /** Called when the activity is first created. */
@@ -44,6 +46,15 @@ public class DatatableList extends ListActivity {
 			}
 		});
     }
+    
+    @Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+		super.onListItemClick(l, v, position, id);
+		// Get the item that was clicked
+		SimpleCursorAdapter adapt;
+		adapt = (SimpleCursorAdapter)getListAdapter();
+		Toast.makeText(this, adapt.getCursor().toString(), Toast.LENGTH_LONG).show();		
+	}
     
     protected void fillData() {
     	cursor = shoppinglistapp.getDBAdapter().fetchAllDataSets(tablename);

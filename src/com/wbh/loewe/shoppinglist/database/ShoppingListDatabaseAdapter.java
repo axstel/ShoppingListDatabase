@@ -45,23 +45,13 @@ public class ShoppingListDatabaseAdapter {
 	}
 	
 	/* Create a new article and return the rowid of new dataset */
-	public long createArticle(String aName, int aCategory, int aQuantityUnit) {
-		ContentValues values = new ContentValues();
-		values.put(ShoppingListDatabase.FIELD_NAME_NAME, aName);
-		values.put(ShoppingListDatabase.FIELD_NAME_IDCATEGORY, aCategory);
-		values.put(ShoppingListDatabase.FIELD_NAME_IDQUANTITYUNIT, aQuantityUnit);
-		
-		return db.insert(ShoppingListDatabase.TABLE_NAME_ARTICLE, null, values);
+	public long createArticle(ContentValues aValues) {
+		return db.insert(ShoppingListDatabase.TABLE_NAME_ARTICLE, null, aValues);
 	}
 	
 	/* update article and return if succeed or not */
-	public boolean  updateArticle(long aID, String aName, int aCategory, int aQuantityUnit) {
-		ContentValues values = new ContentValues();
-		values.put(ShoppingListDatabase.FIELD_NAME_NAME, aName);
-		values.put(ShoppingListDatabase.FIELD_NAME_IDCATEGORY, aCategory);
-		values.put(ShoppingListDatabase.FIELD_NAME_IDQUANTITYUNIT, aQuantityUnit);
-		
-		return db.update(ShoppingListDatabase.TABLE_NAME_ARTICLE, values, ShoppingListDatabase.FIELD_NAME_ID + "=" + aID, null) > 0;
+	public boolean  updateArticle(long aID, ContentValues aValues) {
+		return db.update(ShoppingListDatabase.TABLE_NAME_ARTICLE, aValues, ShoppingListDatabase.FIELD_NAME_ID + "=" + aID, null) > 0;
 	} 
 	
 	/* delete article and return if succeed or not */
