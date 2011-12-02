@@ -36,8 +36,6 @@ public class DatatableList extends ListActivity {
 			}
 		});
 		
-		/* http://about-android.blogspot.com/2010/02/create-custom-dialog.html */
-		/* http://androidcookbook.com/Recipe.seam;jsessionid=40151FCD26222877E151C3EEFB406EED?recipeId=1728&recipeFrom=ViewTOC */
 		btn = (Button)findViewById(R.id.btn_additem);
 		btn.setOnClickListener(new View.OnClickListener() {
 			
@@ -55,11 +53,10 @@ public class DatatableList extends ListActivity {
  		int[] to = new int[] { R.id.labelid, R.id.labelname };
 
  		// Now create an array adapter and set it to display using our row
- 		SimpleCursorAdapter notes = new SimpleCursorAdapter(this, R.layout.list_row, cursor, from, to);
- 		setListAdapter(notes);
+ 		SimpleCursorAdapter datasets = new SimpleCursorAdapter(this, R.layout.list_row, cursor, from, to);
+ 		setListAdapter(datasets);
  	}
     
     protected void showAddItemDialog() {
-    	
     }
 }
