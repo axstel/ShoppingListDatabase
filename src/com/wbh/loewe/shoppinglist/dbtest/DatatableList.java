@@ -36,7 +36,8 @@ public class DatatableList extends ListActivity {
 			}
 		});
 		
-		/* http://about-android.blogspot.com/2010/02/create-custom-dialog.html*/
+		/* http://about-android.blogspot.com/2010/02/create-custom-dialog.html */
+		/* http://androidcookbook.com/Recipe.seam;jsessionid=40151FCD26222877E151C3EEFB406EED?recipeId=1728&recipeFrom=ViewTOC */
 		btn = (Button)findViewById(R.id.btn_additem);
 		btn.setOnClickListener(new View.OnClickListener() {
 			

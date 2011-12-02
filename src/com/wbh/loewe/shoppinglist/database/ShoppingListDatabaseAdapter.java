@@ -10,6 +10,12 @@ import android.database.sqlite.SQLiteDatabase;
 
 public class ShoppingListDatabaseAdapter {
 
+	/* http://android-developers.de/tutorials-faqs/der-umgang-sqlite-404.html */
+	/* http://www.vogella.de/articles/AndroidSQLite/article.html */
+	/* http://android-developers.de/tutorials-faqs/der-umgang-der-sqlite-datenbank-414.html */
+	/* http://www.codeproject.com/KB/android/AndroidSQLite.aspx */
+	/* http://www.androidpit.de/de/android/forum/thread/413639/ExpandableListAdapter-und-SQLite */
+	
 	private Context context;
 	private SQLiteDatabase db;
 	private ShoppingListDatabaseHelper dbHelper;
