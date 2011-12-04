@@ -18,25 +18,25 @@ public class ShoppingListDatabaseActivity extends Activity {
         
         btn_tableList = (Button) findViewById(R.id.btn_quantityunits);
         btn_tableList.setOnClickListener(new View.OnClickListener() {
-		public void onClick(View v) {
-			Intent intent = new Intent(ShoppingListDatabaseActivity.this, QuantityunitList.class);
-			startActivity(intent);
+        	public void onClick(View v) {
+        		Intent intent = new Intent(ShoppingListDatabaseActivity.this, QuantityunitList.class);
+        		startActivity(intent);
 		}
         });
         
         btn_tableList = (Button) findViewById(R.id.btn_categories);
         btn_tableList.setOnClickListener(new View.OnClickListener() {
-		public void onClick(View v) {
-			Intent intent = new Intent(ShoppingListDatabaseActivity.this, CategoryList.class);
-			startActivity(intent);
+        	public void onClick(View v) {
+        		Intent intent = new Intent(ShoppingListDatabaseActivity.this, CategoryList.class);
+        		startActivity(intent);
 		}
         });
         
         btn_tableList = (Button) findViewById(R.id.btn_articles);
         btn_tableList.setOnClickListener(new View.OnClickListener() {
-		public void onClick(View v) {
-			Intent intent = new Intent(ShoppingListDatabaseActivity.this, ArticleList.class);
-			startActivity(intent);
+        	public void onClick(View v) {
+				Intent intent = new Intent(ShoppingListDatabaseActivity.this, ArticleList.class);
+				startActivity(intent);
 		}
         });
     }

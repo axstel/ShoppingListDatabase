@@ -12,9 +12,9 @@ import android.widget.Toast;
 import com.wbh.loewe.shoppinglist.database.ShoppingListDatabase;
 
 public class DatatableList extends ListActivity {
-	
+
 	private Cursor cursor;
-	ShoppingListDatabaseApplication shoppinglistapp;
+	protected ShoppingListDatabaseApplication shoppinglistapp;
 	protected String tablename;
 	
     /** Called when the activity is first created. */
@@ -64,7 +64,7 @@ public class DatatableList extends ListActivity {
  		int[] to = new int[] { R.id.labelid, R.id.labelname };
 
  		// Now create an array adapter and set it to display using our row
- 		SimpleCursorAdapter datasets = new SimpleCursorAdapter(this, R.layout.list_row, cursor, from, to);
+ 		ListCursorAdapter datasets = new ListCursorAdapter(this, R.layout.list_row, cursor, from, to);
  		setListAdapter(datasets);
  	}
     

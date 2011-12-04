@@ -3,19 +3,16 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-
-    <Button
+	<Button
         android:id="@+id/btn_quantityunits"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_quantityunits_caption" />
-
     <Button
         android:id="@+id/btn_categories"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_categories_caption" />
-
     <Button
         android:id="@+id/btn_articles"
         android:layout_width="fill_parent"
